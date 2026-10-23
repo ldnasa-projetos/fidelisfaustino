@@ -1,0 +1,69 @@
+/* Dedicated landing composition by Michelangelo, using the existing Fidelis DS. */
+:root{
+  --virada-hero-left:52%;
+  --virada-hero-right:48%;
+  --virada-hero-title:33.8125rem;
+  --virada-heading-max:50rem;
+  --virada-authority-copy:34rem;
+  --virada-authority-photo:30rem;
+  --virada-hero-mobile-ratio:1.56;
+  --virada-hero-mobile-top:5rem;
+}
+.virada-hero{display:grid;grid-template-columns:var(--virada-hero-left) var(--virada-hero-right);margin-top:var(--size-header-height);min-height:var(--size-panorama-height);overflow:clip}
+.virada-hero-photo{grid-column:2;grid-row:1;width:100%;height:100%;min-height:var(--size-panorama-height);object-fit:cover;object-position:center}
+.virada-hero-content{grid-column:1;grid-row:1;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:var(--space-lg);padding:var(--space-section-y) var(--space-section) var(--space-section-y) max(var(--layout-gutter),calc((100vw - var(--size-container-max))/2));max-width:none;min-width:var(--space-none)}
+.virada-hero h1{max-width:var(--virada-hero-title);text-wrap:balance}
+.virada-hero-summary{max-width:var(--size-hero-support-max)}
+.virada-hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-lg)}
+.virada-hero-cta,.virada-process .button{background:var(--color-bg-primary);color:var(--color-text-accent)}
+.virada-hero-cta:hover,.virada-process .button:hover{background:var(--color-bg-subtle)}
+.virada-hero-note{max-width:var(--size-hero-support-max)}
+.virada-learn{display:inline-flex;align-items:center;gap:var(--space-md);min-height:var(--size-control-min-target);text-decoration:underline;text-underline-offset:var(--text-decoration-offset)}
+.virada-learn span{font-size:var(--type-size-h3)}
+.virada-anchor-nav{display:flex;flex-wrap:wrap;gap:var(--space-md) var(--space-lg);padding-top:var(--space-md);border-top:var(--border-width) solid var(--color-border-default);font-size:var(--type-size-small)}
+.virada-anchor-nav a{display:flex;align-items:center;min-height:var(--size-control-min-target);text-decoration:underline;text-underline-offset:var(--text-decoration-offset)}
+.virada-split,.virada-closing-layout{display:grid;grid-template-columns:minmax(var(--space-none),4fr) minmax(var(--space-none),7fr);gap:var(--space-section);align-items:start}
+.virada-copy{display:flex;flex-direction:column;align-items:flex-start;gap:var(--space-lg);min-width:var(--space-none)}
+.virada-flow{display:flex;flex-direction:column;align-items:flex-start;gap:var(--space-xl)}
+.virada-flow>.intro,.virada-risk-heading>.intro{max-width:var(--virada-heading-max)}
+.virada-signals{width:100%}
+.virada-signal{display:grid;grid-template-columns:var(--space-section) minmax(var(--space-none),1fr);gap:var(--space-xl);border-top:var(--border-width) solid var(--color-border-default);padding-block:var(--space-lg)}
+.virada-signal:last-child{border-bottom:var(--border-width) solid var(--color-border-default)}
+.virada-signal>div{display:flex;flex-direction:column;gap:var(--space-sm)}
+.virada-number{font-family:var(--font-display),serif;font-size:var(--type-size-h2);line-height:var(--type-line-h2);color:var(--color-text-accent)}
+.virada-risk-heading{display:flex;flex-direction:column;gap:var(--space-lg);max-width:var(--virada-heading-max);margin-bottom:var(--space-section)}
+.virada-risk-heading>p,.virada-risk p{color:var(--color-text-secondary)}
+.virada-risk-grid{display:grid;grid-template-columns:repeat(2,minmax(var(--space-none),1fr));gap:var(--layout-gap-wide)}
+.virada-risk{display:flex;flex-direction:column;gap:var(--space-md);border-top:var(--border-width) solid var(--color-border-default);padding-top:var(--space-lg)}
+.virada-steps{display:grid;grid-template-columns:repeat(4,minmax(var(--space-none),1fr));gap:var(--space-xl);width:100%;margin-top:var(--space-xl)}
+.virada-step{display:flex;flex-direction:column;gap:var(--space-md);min-width:var(--space-none)}
+.virada-step>.virada-number{color:var(--color-text-inverse);padding-bottom:var(--space-lg);border-bottom:var(--border-width) solid var(--color-border-default)}
+.virada-step .body-secondary{color:var(--color-text-inverse)}
+.virada-authority-layout{display:grid;grid-template-columns:minmax(var(--space-none),var(--virada-authority-photo)) minmax(var(--space-none),var(--virada-authority-copy));gap:var(--space-section);justify-content:space-between;align-items:start}
+.virada-authority-photo{width:100%;aspect-ratio:var(--layout-profile-image-ratio);height:auto;object-fit:cover}
+.virada-authority-copy{display:flex;flex-direction:column;align-items:flex-start;gap:var(--space-xl);min-width:var(--space-none)}
+.virada-authority-grid{display:flex;flex-direction:column;width:100%}
+.virada-authority-item{display:flex;flex-direction:column;gap:var(--space-sm);padding-block:var(--space-lg);border-top:var(--border-width) solid var(--color-border-default)}
+.virada-authority-item:last-child{border-bottom:var(--border-width) solid var(--color-border-default)}
+.virada-authority-value{font-family:var(--font-display),serif;font-size:var(--type-size-h3);line-height:var(--type-line-h3);color:var(--color-text-accent)}
+.virada-closing .intro{max-width:var(--virada-hero-title)}
+@media(max-width:63.999rem){
+  .virada-hero-content{padding-right:var(--space-xl)}
+  .virada-split,.virada-closing-layout,.virada-authority-layout{gap:var(--space-xl)}
+  .virada-steps{grid-template-columns:repeat(2,minmax(var(--space-none),1fr))}
+}
+@media(max-width:47.999rem){
+  .virada-hero{display:flex;flex-direction:column;min-height:var(--space-none)}
+  .virada-hero-content{order:1;padding:var(--virada-hero-mobile-top) var(--layout-gutter) var(--layout-gap-wide);gap:var(--space-lg)}
+  .virada-hero-photo{order:2;min-height:var(--space-none);aspect-ratio:var(--virada-hero-mobile-ratio);height:auto;object-position:center}
+  .virada-hero h1{width:100%}
+  .virada-split,.virada-closing-layout,.virada-authority-layout{grid-template-columns:minmax(var(--space-none),1fr)}
+  .virada-flow{gap:var(--space-xl)}
+  .virada-signal{grid-template-columns:var(--size-control-min-target) minmax(var(--space-none),1fr);gap:var(--space-md)}
+  .virada-signal h3{font-size:var(--type-size-h3);line-height:var(--type-line-h3)}
+  .virada-risk-heading{margin-bottom:var(--space-xl)}
+  .virada-risk-grid,.virada-steps{grid-template-columns:minmax(var(--space-none),1fr);gap:var(--space-xl)}
+  .virada-steps{margin-top:var(--space-none)}
+  .virada-authority-photo{max-width:var(--virada-authority-photo)}
+  .virada-authority-layout{gap:var(--space-xl)}
+}

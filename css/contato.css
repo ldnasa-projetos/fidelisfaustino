@@ -1,0 +1,14 @@
+/* The dedicated page preserves the homepage contact composition. */
+:root{--contact-map-height:30rem;--contact-map-mobile-height:22.5rem;--contact-location-y:3rem}
+.contact-page main{margin-top:var(--size-header-height)}
+.contact-location-header{padding:var(--contact-location-y) var(--layout-gutter)}
+.contact-location-head{display:flex;align-items:center;justify-content:space-between;gap:var(--space-xl)}
+.contact-location-copy{display:flex;flex-direction:column;gap:var(--space-md)}
+.contact-location-copy h2{font-size:var(--type-size-h3);line-height:var(--type-line-h3)}
+.contact-location-copy address{color:var(--color-text-secondary)}
+.contact-location-head .text-link{flex:none;gap:var(--space-sm);text-decoration:underline}
+.contact-map{display:block;width:100%;height:var(--contact-map-height);border:var(--space-none)}
+@media(max-width:47.999rem){
+  .contact-location-head{flex-direction:column;align-items:flex-start;gap:var(--space-md)}
+  .contact-map{height:var(--contact-map-mobile-height)}
+}
