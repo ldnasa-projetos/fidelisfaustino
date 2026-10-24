@@ -45,7 +45,7 @@
   .areas-enhanced .areas-nav{display:none}
   .areas-enhanced .areas-mobile-picker{display:flex;flex-direction:column;gap:var(--space-sm)}
   .areas-mobile-picker label{font-size:var(--type-size-small);color:var(--color-text-secondary)}
-  .areas-mobile-picker select{width:100%;min-width:var(--space-none);min-height:var(--size-control-height);font:inherit;color:var(--color-text-primary);background:var(--color-bg-primary);border:var(--border-width) solid var(--color-border-default);border-radius:var(--radius-control);padding:var(--space-sm);text-overflow:ellipsis}
+  .areas-mobile-picker select{width:100%;min-width:var(--space-none);min-height:var(--size-control-height);font:inherit;color:var(--color-text-primary);background:var(--color-bg-primary);border:var(--border-width) solid var(--color-border-control);border-radius:var(--radius-control);padding:var(--space-sm);text-overflow:ellipsis}
   .areas-detail{max-width:none;padding-top:var(--space-xl)}
   .area-intro h2{font-size:var(--type-size-h3);line-height:var(--type-line-h3)}
   .area-faq{margin-top:var(--space-xl)}

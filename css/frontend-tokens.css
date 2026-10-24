@@ -45,6 +45,7 @@
   --size-focus-outline: var(--border-focus-width);
   --color-dialog-backdrop: rgb(29 29 27 / 0.45);
   --color-menu-rule: var(--color-border-default);
+  --color-border-control: var(--primitive-color-disabled-text);
   --layer-header: 20;
   --layer-menu: 19;
   --layer-skip-link: 40;

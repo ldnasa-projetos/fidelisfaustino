@@ -118,7 +118,7 @@ section,footer{scroll-margin-top:var(--size-scroll-offset)}
 .attendance .step{gap:var(--space-lg)}
 .attendance .step-number{color:var(--color-text-accent)}
 .step-copy{display:flex;flex-direction:column;gap:var(--space-md)}
-.attendance .step h3{min-height:var(--size-step-title-min)}
+.attendance .step h3{min-height:var(--space-none)}
 .blog .stack{gap:var(--layout-gap-wide)}
 .blog-header{display:flex;justify-content:space-between;align-items:center;gap:var(--space-xl);width:100%}
 .blog-header>.intro{flex:1}
@@ -149,7 +149,7 @@ section,footer{scroll-margin-top:var(--size-scroll-offset)}
 .field{display:flex;flex-direction:column;gap:var(--space-sm);min-width:var(--space-none)}
 .field label{font-weight:var(--font-style-medium)}
 .field-wide{grid-column:1 / -1}
-.field input,.field textarea{width:100%;border:var(--border-width) solid var(--color-border-default);border-radius:var(--radius-control);padding:var(--space-header-y) var(--space-control-x);background:var(--color-bg-primary)}
+.field input,.field textarea{width:100%;border:var(--border-width) solid var(--color-border-control);border-radius:var(--radius-control);padding:var(--space-header-y) var(--space-control-x);background:var(--color-bg-primary)}
 .field input{min-height:var(--size-control-height)}
 .field textarea{min-height:var(--size-textarea-min);resize:vertical}
 .form-actions{display:flex;flex-direction:column;align-items:flex-start;gap:var(--space-md)}
@@ -285,6 +285,13 @@ section,footer{scroll-margin-top:var(--size-scroll-offset)}
 .panorama-parallax{width:100%;height:100%}
 
 @media(max-width:47.999rem){.header-contact > span{font-size:var(--type-size-small)}.button{width:auto}.button-primary-width{min-width:var(--space-none)}}
+
+/* Keep the original brand readable when the three header controls stop fitting. */
+@media(max-width:22.5rem){
+  .header-inner{display:grid;grid-template-columns:var(--size-control-min-target) minmax(var(--space-none),1fr) var(--size-header-action);gap:var(--space-sm)}
+  .menu-trigger{width:var(--size-control-min-target)}
+  .header-brand{position:static;left:auto;transform:none;justify-self:center;width:min(100%,var(--size-brand-header-width));min-height:var(--size-control-min-target);display:flex;align-items:center}
+}
 
 .contact-invite{background-image:linear-gradient(180deg,var(--color-contact-photo-top),var(--color-contact-photo-mid) 48%,var(--color-contact-photo-bottom)),url('../assets/images/contact/fuel-attendant-v1.webp');background-size:cover;background-position:center bottom;min-height:var(--layout-contact-photo-min)}
 .faq-layout{display:grid;grid-template-columns:minmax(var(--space-none),var(--layout-faq-heading)) minmax(var(--space-none),1fr);gap:var(--layout-gap-wide);align-items:start}
