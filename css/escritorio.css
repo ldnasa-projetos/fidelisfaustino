@@ -1,7 +1,7 @@
 /* About-page proportions measured from the requested Coverly reference.
    Brand colours, typography and shared navigation come from the approved Fidelis DS. */
 :root{
- --about-hero-top:6.25rem;--about-hero-bottom:5rem;--about-hero-width:50.3125rem;--about-support-width:39.6875rem;
+ --about-hero-top:var(--layout-hero-content-top);--about-hero-bottom:var(--layout-hero-content-bottom);--about-hero-width:50.3125rem;--about-support-width:39.6875rem;
  --about-panorama-height:44.125rem;--about-logo-height:2.75rem;--about-logos-width:52rem;
  --about-history-height:44.234375rem;--about-trust-height:46.25rem;--about-team-height:27.75rem;--about-card-gap:1.25rem;
  --about-section-gap:6.25rem;--about-team-gap:4rem;--about-heading-width:54.6875rem;
@@ -80,7 +80,7 @@
 @media(max-width:63.999rem){:root{--about-history-height:35rem;--about-trust-height:35rem;--about-team-height:24rem;--about-quote-width:22rem}.about-team-grid{grid-template-columns:repeat(2,minmax(var(--space-none),1fr))}.about-history .display,.about-trust .display{font-size:var(--type-size-h2);line-height:var(--type-line-h2);letter-spacing:var(--type-tracking-normal)}.about-logo-row{gap:var(--space-md)}.about-logo{font-size:var(--type-size-body)}.about-stats{gap:var(--space-lg)}.about-testimonials-head>.container{grid-template-columns:minmax(var(--space-none),.45fr) minmax(var(--space-none),1fr)}}
 @media(max-width:63.999rem){:root{--about-contact-width:32rem;--about-contact-padding:var(--space-xl)}}
 @media(max-width:47.999rem){
- :root{--about-hero-top:6.25rem;--about-hero-bottom:2.5rem;--about-panorama-height:16.9375rem;--about-history-height:21.875rem;--about-trust-height:21.875rem;--about-team-height:27.75rem;--about-section-gap:4rem;--about-team-gap:2.5rem;--about-card-gap:1.25rem;--about-contact-overlap:2.5rem;--about-contact-width:100%;--about-contact-height:var(--space-none);--about-contact-padding:var(--space-lg);--about-quote-width:calc(100vw - var(--layout-gutter) * 2);--about-quote-height:35rem}
+ :root{--about-panorama-height:16.9375rem;--about-history-height:21.875rem;--about-trust-height:21.875rem;--about-team-height:27.75rem;--about-section-gap:4rem;--about-team-gap:2.5rem;--about-card-gap:1.25rem;--about-contact-overlap:2.5rem;--about-contact-width:100%;--about-contact-height:var(--space-none);--about-contact-padding:var(--space-lg);--about-quote-width:calc(100vw - var(--layout-gutter) * 2);--about-quote-height:35rem}
  .about-logo-row{grid-template-columns:repeat(2,minmax(var(--space-none),1fr));gap:var(--space-sm) var(--space-lg);max-width:100%}
  .about-logo{font-size:var(--type-size-body)}
  .about-logos{padding-block:var(--space-xl)}

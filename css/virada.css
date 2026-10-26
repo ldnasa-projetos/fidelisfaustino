@@ -7,7 +7,7 @@
   --virada-authority-copy:34rem;
   --virada-authority-photo:30rem;
   --virada-hero-mobile-ratio:1.56;
-  --virada-hero-mobile-top:5rem;
+  --virada-hero-mobile-top:calc(var(--layout-hero-content-top) - var(--size-header-height));
 }
 .virada-hero{display:grid;grid-template-columns:var(--virada-hero-left) var(--virada-hero-right);margin-top:var(--size-header-height);min-height:var(--size-panorama-height);overflow:clip}
 .virada-hero-photo{grid-column:2;grid-row:1;width:100%;height:100%;min-height:var(--size-panorama-height);object-fit:cover;object-position:center}
@@ -54,7 +54,7 @@
 }
 @media(max-width:47.999rem){
   .virada-hero{display:flex;flex-direction:column;min-height:var(--space-none)}
-  .virada-hero-content{order:1;padding:var(--virada-hero-mobile-top) var(--layout-gutter) var(--layout-gap-wide);gap:var(--space-lg)}
+  .virada-hero-content{order:1;padding:var(--virada-hero-mobile-top) var(--layout-gutter) var(--layout-hero-content-bottom);gap:var(--space-lg)}
   .virada-hero-photo{order:2;min-height:var(--space-none);aspect-ratio:var(--virada-hero-mobile-ratio);height:auto;object-position:center}
   .virada-hero h1{width:100%}
   .virada-split,.virada-closing-layout,.virada-authority-layout{grid-template-columns:minmax(var(--space-none),1fr)}
